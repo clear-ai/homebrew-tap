@@ -5,7 +5,7 @@ class Clearctl < Formula
   homepage "https://example.com/"
   url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1/clearctl_0.0.1_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
   version "0.0.1"
-  sha256 "ec43752f1a48d733df017c7dd6833481a466bc539e9d0d9c1b9a30d98981b8f0"
+  sha256 "1188d4b1fa9f2b00721c287478f0db4f98d80c626b5732bd0b10eb0e8d7715e9"
 
   def install
     bin.install "clearctl"
