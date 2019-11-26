@@ -3,16 +3,16 @@ require_relative "../custom_download_strategy.rb"
 class Clearctl < Formula
   desc "clearctl CLI tool for authenticating, creating and managing systems"
   homepage "https://clear.ai/"
-  version "0.0.1-master-master"
+  version "0.0.1-master"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1-master-master/clearctl_0.0.1-master-master_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "a06a0a1c4cd2c1806aea294c45c099af4b4cb80109d176c5608e53627b329869"
+    url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1-master/clearctl_0.0.1-master_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "15a8fd56acd0904662ffff96caa20c47fbb17ab4f8d9f32d9c95cf3bb31af49e"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1-master-master/clearctl_0.0.1-master-master_linux_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "6cb2b85c7cb5fe13169d8c0fd96f4241188a7ea85c091927f22873a980ee61c9"
+      url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1-master/clearctl_0.0.1-master_linux_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ef9ea44b156982dcb047088e9d6fbee1c47ea263c9739333b1e5180e2a56b313"
     end
   end
   
