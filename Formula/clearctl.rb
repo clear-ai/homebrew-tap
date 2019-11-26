@@ -8,11 +8,11 @@ class Clearctl < Formula
 
   if OS.mac?
     url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1-master-master/clearctl_0.0.1-master-master_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "ec149b2dc6f14e57cbb32b473ab5be1c62f07b444c51f1ada93763f361b797e3"
+    sha256 "a06a0a1c4cd2c1806aea294c45c099af4b4cb80109d176c5608e53627b329869"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1-master-master/clearctl_0.0.1-master-master_linux_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "dfa503234e99a232f85ceeb8b4b56749c29f3d7392c0e14326ca19d0dca6ca71"
+      sha256 "6cb2b85c7cb5fe13169d8c0fd96f4241188a7ea85c091927f22873a980ee61c9"
     end
   end
   
