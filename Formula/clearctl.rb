@@ -2,27 +2,12 @@
 require_relative "../custom_download_strategy.rb"
 class Clearctl < Formula
   desc "clearctl CLI tool for authenticating, creating and managing systems"
-  homepage "https://clear.ai/"
-  version "0.0.1-master"
-  bottle :unneeded
-
-  if OS.mac?
-    url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1-master/clearctl_0.0.1-master_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "ec25b7b3f0175947ba09ccd056bb3b76ce8b3b229c90b0d55dbe2155efe35a59"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1-master/clearctl_0.0.1-master_linux_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e14a4846fa49daa2d2e2a64b7bd24fe8ce021d19ab927e658149d1e1b41505fe"
-    end
-  end
-  
-  depends_on "awscli"
-  depends_on "velero"
-  depends_on "kubectl"
-  depends_on "terraform"
-  depends_on "vault"
+  homepage "https://example.com/"
+  url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1/clearctl_0.0.1_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
+  version "0.0.1"
+  sha256 "1188d4b1fa9f2b00721c287478f0db4f98d80c626b5732bd0b10eb0e8d7715e9"
 
   def install
-    bin.install "program"
+    bin.install "clearctl"
   end
 end
