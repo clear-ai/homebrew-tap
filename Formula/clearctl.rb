@@ -8,11 +8,11 @@ class Clearctl < Formula
 
   if OS.mac?
     url "https://github.com/clear-ai/clearctl/releases/download/v0.1.0/clearctl_0.1.0_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "58a32b2973bff219ff03f1360cefa10d3f979521ac283a8c1e83f6fd4d3edd85"
+    sha256 "fff05fe814928c2c5f475e38dfbad0153b9627c85d4c9d441fa8a02f6d691947"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/clear-ai/clearctl/releases/download/v0.1.0/clearctl_0.1.0_linux_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "beb3c8ae35a518ab15ab04f2ba7f6d87bda3160c54eb98859f42fd6a8aae5164"
+      sha256 "304cd8500f95ed86cbe46aee6c3c4573a8a086b8f7456766b355b306c0d37d9a"
     end
   end
   
@@ -23,6 +23,6 @@ class Clearctl < Formula
   depends_on "vault"
 
   def install
-    bin.install "program"
+    bin.install "clearctl"
   end
 end
