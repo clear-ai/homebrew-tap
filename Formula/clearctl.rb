@@ -2,12 +2,27 @@
 require_relative "../custom_download_strategy.rb"
 class Clearctl < Formula
   desc "clearctl CLI tool for authenticating, creating and managing systems"
-  homepage "https://example.com/"
-  url "https://github.com/clear-ai/clearctl/releases/download/v0.0.1/clearctl_0.0.1_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-  version "0.0.1"
-  sha256 "1188d4b1fa9f2b00721c287478f0db4f98d80c626b5732bd0b10eb0e8d7715e9"
+  homepage "https://clear.ai/"
+  version "0.1.0"
+  bottle :unneeded
+
+  if OS.mac?
+    url "https://github.com/clear-ai/clearctl/releases/download/v0.1.0/clearctl_0.1.0_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "58a32b2973bff219ff03f1360cefa10d3f979521ac283a8c1e83f6fd4d3edd85"
+  elsif OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/clear-ai/clearctl/releases/download/v0.1.0/clearctl_0.1.0_linux_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "beb3c8ae35a518ab15ab04f2ba7f6d87bda3160c54eb98859f42fd6a8aae5164"
+    end
+  end
+  
+  depends_on "awscli"
+  depends_on "velero"
+  depends_on "kubectl"
+  depends_on "terraform"
+  depends_on "vault"
 
   def install
-    bin.install "clearctl"
+    bin.install "program"
   end
 end
