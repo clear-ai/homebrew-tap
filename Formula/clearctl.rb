@@ -16,7 +16,6 @@ class Clearctl < Formula
     end
   end
   
-  depends_on "awscli"
   depends_on "velero"
   depends_on "kubectl"
   depends_on "terraform"
