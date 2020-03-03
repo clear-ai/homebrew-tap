@@ -3,23 +3,18 @@ require_relative "../custom_download_strategy.rb"
 class Clearctl < Formula
   desc "clearctl CLI tool for authenticating, creating and managing systems"
   homepage "https://clear.ai/"
-  version "0.1.2"
+  version "0.2.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/clear-ai/clearctl/releases/download/v0.1.2/clearctl_0.1.2_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-    sha256 "0679c6c8fa9f746dc4d10f8fce08a85f73330453aa1eea7b084a760941a8a6f4"
+    url "https://github.com/clear-ai/clearctl/releases/download/v0.2.0/clearctl_0.2.0_darwin_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
+    sha256 "e2261382eec183aa86778a82c28661fc71f75b6d0a80a87d846c512d6fae4016"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/clear-ai/clearctl/releases/download/v0.1.2/clearctl_0.1.2_linux_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "2311941665e025327bb5ef946d428ae2d644297025a74d2309fe1186f85682df"
+      url "https://github.com/clear-ai/clearctl/releases/download/v0.2.0/clearctl_0.2.0_linux_amd64.tar.gz", :using => CustomGitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ea62ca761ce36c4f2fc5349f3935932366192a40ef9e83cbbf3730278f5c33c7"
     end
   end
-  
-  depends_on "velero"
-  depends_on "kubectl"
-  depends_on "terraform"
-  depends_on "vault"
 
   def install
     bin.install "clearctl"
